@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>重庆市瑞涌信息技术有限公司 - 官方网站</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+
+        /* 全局样式 */
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 头部导航 */
+        header {
+            background: #1a3b66;
+            color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-menu li {
+            margin-left: 30px;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #4d9fff;
+        }
+
+        /* Banner */
+        .banner {
+            height: 500px;
+            background: linear-gradient(rgba(26,59,102,0.85), rgba(26,59,102,0.9)), url('https://picsum.photos/id/180/1920/1080');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .banner-content h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .banner-content p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #4d9fff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #357abd;
+        }
+
+        /* 通用区块 */
+        section {
+            padding: 70px 0;
+            background: white;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .title {
+            text-align: center;
+            font-size: 28px;
+            color: #1a3b66;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .title::after {
+            content: "";
+            width: 60px;
+            height: 3px;
+            background: #4d9fff;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -10px;
+        }
+
+        /* 关于我们 */
+        .about p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* 业务范围 */
+        .business {
+            background: #f9fbfd;
+        }
+
+        .business-list {
+            column-count: 2;
+            column-gap: 30px;
+        }
+
+        .business-list li {
+            margin-bottom: 10px;
+            list-style-position: inside;
+        }
+
+        /* 产品方案 */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .product-item {
+            padding: 25px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .product-item:hover {
+            transform: translateY(-5px);
+            border-color: #4d9fff;
+        }
+
+        .product-item h3 {
+            color: #1a3b66;
+            margin-bottom: 10px;
+        }
+
+        /* 联系我们 */
+        .contact-info {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+        }
+
+        /* 底部 */
+        footer {
+            background: #1a3b66;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 20px;
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            .nav-menu {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .nav-menu li {
+                margin: 0 12px;
+                line-height: 30px;
+            }
+            .banner {
+                height: 380px;
+                padding: 0 15px;
+            }
+            .banner-content h1 {
+                font-size: 28px;
+            }
+            .business-list {
+                column-count: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 头部导航 -->
+<header>
+    <div class="container nav">
+        <div class="logo">重庆市瑞涌信息技术有限公司</div>
+        <ul class="nav-menu">
+            <li><a href="#home">首页</a></li>
+            <li><a href="#about">关于我们</a></li>
+            <li><a href="#business">业务范围</a></li>
+            <li><a href="#product">产品方案</a></li>
+            <li><a href="#contact">联系我们</a></li>
+        </ul>
+    </div>
+</header>
+
+<!-- Banner 首页 -->
+<section class="banner" id="home">
+    <div class="container banner-content">
+        <h1>专业信息技术解决方案服务商</h1>
+        <p>重庆市瑞涌信息技术有限公司成立于2019年，专注于系统集成、软件开发、安防工程、弱电安装、智能设备销售与服务</p>
+        <a href="#contact" class="btn">立即咨询</a>
+    </div>
+</section>
+
+<!-- 关于我们 -->
+<section class="about" id="about">
+    <div class="container">
+        <h2 class="title">关于我们</h2>
+        <p><strong>重庆市瑞涌信息技术有限公司</strong>成立于2019年11月27日，注册地位于重庆市万州区山湾街83号。</p>
+        <p>公司是一家集信息技术研发、系统集成、设备销售、工程安装与技术服务于一体的综合性科技企业，拥有完善的产品体系与服务团队，为政府、企业、社区、学校、医院等单位提供全方位信息化解决方案。</p>
+        <p>我们坚持“诚信为本、技术为先、服务至上”的经营理念，致力于为客户提供稳定、高效、专业的信息技术服务。</p>
+    </div>
+</section>
+
+<!-- 业务范围 -->
+<section class="business" id="business">
+    <div class="container">
+        <h2 class="title">业务范围</h2>
+        <ul class="business-list">
+            <li>计算机系统集成</li>
+            <li>计算机硬件开发及销售</li>
+            <li>计算机信息技术服务</li>
+            <li>网络安全设备销售及技术服务</li>
+            <li>应用软件开发、销售及维护</li>
+            <li>开发、销售、维修智能停车场系统、楼宇智能系统</li>
+            <li>设计、销售、安装、维护安防设备、智能家居设备、多媒体设备</li>
+            <li>会展服务、摄影摄像服务、礼仪服务</li>
+            <li>弱电安装</li>
+            <li>二（Ⅱ）类医疗器械销售</li>
+            <li>销售I类医疗器械、办公设备、办公用品、文体用品、五金交电、电线电缆、服装、建材、日用百货、化工产品、化学试剂、仪器仪表、教学设施、实验室设备、视频系统、家用电器、电梯、计算机及周边设备</li>
+            <li>办公设备、摄影摄像设备租赁及维修服务</li>
+            <li>设计、销售、租赁、安装、维修LED显示设备</li>
+            <li>设计、制作、代理、发布国内外广告</li>
+        </ul>
+    </div>
+</section>
+
+<!-- 产品方案 -->
+<section class="product" id="product">
+    <div class="container">
+        <h2 class="title">产品方案</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <h3>软件开发与系统集成</h3>
+                <p>应用软件开发、计算机系统集成、信息技术服务</p>
+            </div>
+            <div class="product-item">
+                <h3>智能系统工程</h3>
+                <p>智能停车场、楼宇智能系统、弱电安装工程</p>
+            </div>
+            <div class="product-item">
+                <h3>安防与智能家居</h3>
+                <p>安防设备、智能家居、多媒体设备设计安装维护</p>
+            </div>
+            <div class="product-item">
+                <h3>LED显示设备</h3>
+                <p>LED显示屏设计、销售、租赁、安装、维修</p>
+            </div>
+            <div class="product-item">
+                <h3>办公及文体设备</h3>
+                <p>办公设备、仪器仪表、教学及实验室设备销售维修</p>
+            </div>
+            <div class="product-item">
+                <h3>医疗器械</h3>
+                <p>Ⅰ类、Ⅱ类医疗器械专业销售服务</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 联系我们 -->
+<section class="contact" id="contact">
+    <div class="container">
+        <h2 class="title">联系我们</h2>
+        <div class="contact-info">
+            <p><strong>公司名称：</strong>重庆市瑞涌信息技术有限公司</p>
+            <p><strong>注册地址：</strong>重庆市万州区山湾街83号</p>
+            <p><strong>成立时间：</strong>2019年11月27日</p>
+            <p><strong>联系人：</strong>石老板</p>
+            <p><strong>联系电话：</strong>13896916811</p>
+            <p><strong>邮箱：</strong>hicnluo@qq.com</p>
+        </div>
+    </div>
+</section>
+
+<!-- 底部 -->
+<footer>
+    <div class="container">
+        <p>© 2025 重庆市瑞涌信息技术有限公司 版权所有</p>
+        <p style="margin-top: 8px; font-size: 14px;">诚信经营 · 专业服务 · 科技创新</p>
+    </div>
+</footer>
+
+</body>
+</html>
